@@ -107,3 +107,8 @@ binary_sensor:
   - platform: ping
     host: 8.8.8.8
     name: GoogleDNS
+
+alarm_control_panel:
+  platform: alarmdotcom
+  username: !secret alarmdotcom_username
+  password: !secret alarmdotcom_password
