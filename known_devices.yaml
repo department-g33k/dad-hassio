@@ -1,0 +1,47 @@
+departmentg33k:
+  hide_if_away: false
+  icon:
+  mac: A0:CC:2B:07:62:B4
+  name: Dan's Phone
+  picture:
+  track: true
+
+ringdoorbell:
+  hide_if_away: false
+  icon:
+  mac: 20:F8:5E:DE:24:3F
+  name: RingDoorbell
+  picture:
+  track: false
+
+pdmbp01osx:
+  hide_if_away: false
+  icon:
+  mac: C4:B3:01:D4:43:3F
+  name: pdmbp01-osx
+  picture:
+  track: True
+
+samsungsmg950u:
+  hide_if_away: false
+  icon:
+  mac: A0:CC:2B:0E:57:5B
+  name: De's Phone
+  picture:
+  track: true
+
+deannasipad:
+  hide_if_away: false
+  icon:
+  mac: CC:78:5F:DA:25:E2
+  name: Deannas-iPad
+  picture:
+  track: false
+
+danielsair:
+  hide_if_away: false
+  icon:
+  mac: 10:93:E9:0E:80:44
+  name: Daniels-Air
+  picture:
+  track: True
