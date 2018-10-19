@@ -100,8 +100,6 @@ climate:
     scan_interval: 300
     region: us
 
-mqtt:
-
 binary_sensor:
   - platform: ping
     host: 192.168.1.1
