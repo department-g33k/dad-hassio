@@ -62,7 +62,6 @@ sun:
 # Weather prediction
 sensor:
   - platform: yr
-  - platform: onewire
 
 # Text to speech
 tts:
@@ -79,13 +78,13 @@ automation: !include automations.yaml
 
 device_tracker:
   - platform: unifi
-    host: 192.168.200.170
-    username: hassio
+    host: 192.168.1.50
+    username: homeassistant
     password: !secret unifi_password
     verify_ssl: False
     detection_time: 150
     ssid_filter:
-      - 'listen-node.ea32b1af.NSA.GOV'
+      - 'BrannonUtility'
     new_device_defaults:
       track_new_devices: False
       hide_if_away: False
@@ -103,80 +102,10 @@ climate:
 
 mqtt:
 
-light:
-  - platform: mqtt_json
-    name: "Portable LEDs"
-    state_topic: "deptg33k/LED"
-    command_topic: "deptg33k/LED/set"
-    effect: true
-    effect_list:
-
-      - bpm
-      - candy cane
-      - confetti
-      - cyclon rainbow
-      - dots
-      - fire
-      - glitter
-      - juggle
-      - lightning
-      - noise
-      - police all
-      - police one
-      - rainbow
-      - rainbow with glitter
-      - ripple
-      - sinelon
-      - solid
-      - twinkle
-    brightness: true
-    flash: true
-    rgb: true
-    optimistic: false
-    qos: 0
-
-  - platform: mqtt_json
-    name: "Big LEDs"
-    state_topic: "deptg33k/BigLED"
-    command_topic: "deptg33k/BigLED/set"
-    effect: true
-    effect_list:
-
-      - bpm
-      - candy cane
-      - confetti
-      - cyclon rainbow
-      - dots
-      - fire
-      - glitter
-      - juggle
-      - lightning
-      - noise
-      - police all
-      - police one
-      - rainbow
-      - rainbow with glitter
-      - ripple
-      - sinelon
-      - solid
-      - twinkle
-    brightness: true
-    flash: true
-    rgb: true
-    optimistic: false
-    qos: 0
-
 binary_sensor:
   - platform: ping
-    host: 192.168.200.254
-    name: HomeRouter
+    host: 192.168.1.1
+    name: EdgeRouterX
   - platform: ping
     host: 8.8.8.8
     name: GoogleDNS
-  - platform: ping
-    host: 1.1.1.1
-    name: CloudFlareDNS
-  - platform: rpi_gpio
-    ports:
-      23: Garage Man Door
-      24: Garage Door
