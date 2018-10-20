@@ -116,3 +116,7 @@ alarm_control_panel:
   password: !secret alarmdotcom_password
 
 homekit:
+  filter:
+    include_domains:
+      - light
+      - alarm_control_panel
